@@ -1,0 +1,65 @@
+
+ .single-form {
+  padding: 5Px;
+}
+
+.error-message {
+    color: red; /* Couleur du texte en rouge */
+}
+
+.single-form {
+  text-align: center; /* Centrer le dropdown horizontalement */
+}
+
+.single-form select,
+.single-form select option {
+  border-radius: 25px !important; /* Utilisation de !important pour garantir l'application du border-radius */
+}
+
+.single-form select {
+  position: relative; /* Rendre le conteneur de l'élément de sélection relatif pour positionner l'ombre */
+  z-index: 1; /* Assurez-vous que l'élément de sélection est en premier plan */
+
+  appearance: none; /* Cacher la flèche par défaut du dropdown */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-color: #A98B59;
+  border-radius: 30px;
+  background-color: #f4e2df;
+  width: 400px; /* Ajuster la largeur selon vos besoins */
+  font-size: 16px; /* Ajuster la taille de la police selon vos besoins */
+  cursor: pointer;
+  text-align-last: center; /* Centrer le texte dans le dropdown */
+  font-weight: bold; /* Texte en gras */
+  color: #A98B59; /* Texte en couleur blanche */
+
+
+}
+
+/* Style de survol pour la flèche personnalisée */
+.single-form select:hover {
+  border-color: #725438;
+}
+
+/* Style de focus pour la flèche personnalisée */
+.single-form select:focus {
+  border-color: #725438;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ajouter une ombre lorsqu'il est en focus */
+}
+
+/* Style de la flèche personnalisée */
+.single-form select::after {
+  content: ''; /* Réinitialiser le contenu pour supprimer la flèche personnalisée */
+  position: absolute;
+  top: calc(100% - 1px); /* Positionner l'ombre en dessous de l'élément de sélection */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Hauteur de l'ombre */
+  background-color: rgba(0, 0, 0, 0.2); /* Couleur de l'ombre */
+  z-index: -1; /* Assurez-vous que l'ombre est en arrière-plan */
+}
+
+.single-form select option {
+  font-weight: bold; /* Texte en gras */
+  color: #A98B59; /* Texte en couleur blanche */
+}

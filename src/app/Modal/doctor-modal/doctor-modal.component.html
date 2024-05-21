@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="doctorModalLabel">Enregistrement Dentiste</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <!-- Formulaire d'enregistrement du dentiste -->
+  <form *ngIf="!formSubmitted" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Spécialités dentaires :</label>
+      <textarea type="text" id="specialitesDentaires" name="specialitesDentaires" class="form-control" [(ngModel)]="formData.specialitesDentaires" required (input)="clearError('specialitesDentaires')"></textarea>
+      <div *ngIf="errorMessages.specialitesDentaires" class="text-danger">{{ errorMessages.specialitesDentaires }}</div>
+    </div>
+    <div class="form-group">
+      <label for="anneesExperience">Années d'expérience:</label>
+      <input type="number" id="anneesExperience" name="anneesExperience" class="form-control" [(ngModel)]="formData.anneesExperience" required (input)="clearError('anneesExperience')">
+      <div *ngIf="errorMessages.anneesExperience" class="text-danger">{{ errorMessages.anneesExperience }}</div>
+    </div>
+    <div class="form-group">
+      <label for="numeroLicenceProfessionnelle">Numéro d'identification dentaire ou licence professionnelle:</label>
+      <input type="text" id="numeroLicenceProfessionnelle" name="numeroLicenceProfessionnelle" class="form-control" [(ngModel)]="formData.numeroLicenceProfessionnelle" required (input)="clearError('numeroLicenceProfessionnelle')">
+      <div *ngIf="errorMessages.numeroLicenceProfessionnelle" class="text-danger">{{ errorMessages.numeroLicenceProfessionnelle }}</div>
+    </div>
+    <div class="form-group">
+      <label for="traitementsPrecedents">Historique des traitements précédents:</label>
+      <textarea type="text" id="traitementsPrecedents" name="traitementsPrecedents" class="form-control" [(ngModel)]="formData.traitementsPrecedents" required (input)="clearError('traitementsPrecedents')"></textarea>
+      <div *ngIf="errorMessages.traitementsPrecedents" class="text-danger">{{ errorMessages.traitementsPrecedents }}</div>
+    </div>
+    <div class="form-group">
+      <label for="horairesConsultation">Horaires de consultation:</label>
+      <input type="text" id="horairesConsultation" name="horairesConsultation" class="form-control" [(ngModel)]="formData.horairesConsultation" required (input)="clearError('horairesConsultation')">
+      <div *ngIf="errorMessages.horairesConsultation" class="text-danger">{{ errorMessages.horairesConsultation }}</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Créer un compte</button>
+  </form>
+  <div *ngIf="formSubmitted">
+    <p>Le formulaire a été soumis avec succès.</p>
+    <!-- Ajoutez ici d'autres éléments à afficher après la soumission du formulaire si nécessaire -->
+  </div>
+</div>

@@ -1,0 +1,262 @@
+
+<!-- Header Section Start -->
+<div class="header section">
+    <!-- Header Main Start -->
+    <div class="header-main">
+      <div class="container">
+        <!-- Header Wrapper Start -->
+        <div class="header-wrapper">
+          <!-- Header Logo Start -->
+          <div class="header-logo">
+            <a routerLink="/home"><img src="assets/images/LOGO SAMIA SAOUDI WEB-3D.png" alt="Logo"></a>
+          </div>
+          <!-- Header Logo End -->
+
+          <!-- Header Menu Start -->
+          <div class="header-menu d-none d-lg-flex">
+            <ul class="nav-menu">
+
+              <li><a class="active" routerLink="/home">Home</a></li>
+              <li><a routerLink="/about">About Us</a></li>
+              
+           <li>
+            <a href="#" (click)="handleLinkClick($event)">Control Panel</a>
+                <ul class="sub-menu">
+             <li>
+            <a href='#' (click)="handleLinkClick($event)">Patient Oversight</a>
+            <ul class="sub-menu">
+                <li><a routerLink="/patient/medical-records">Medical Records</a></li>
+                <li><a routerLink="/patient/educational-resources">Educational Resources</a></li>
+                <li><a routerLink="/patient/profile-update">Profile Update</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href='#' (click)="handleLinkClick($event)">Team Coordination</a>
+            <ul class="sub-menu">
+                <li><a routerLink="/staff/schedules-leave">Schedules & Leave</a></li>
+                <li><a routerLink="/staff/schedules-leave">Scheduling</a></li>
+                <li><a routerLink="/staff/schedules-leave">Leave</a></li>
+                <li><a routerLink="/staff/new-staff">New Staff</a></li>
+                <li><a routerLink="/staff/task-assignment">Task Assignment</a></li>
+            </ul>
+        </li>
+        
+
+        <li>
+          <a href='#' (click)="handleLinkClick($event)"> Care Navigation </a>
+          <ul class="sub-menu">
+            <li><a routerLink="/treatment/dental-treatment-planning">Dental Treatment Planning</a></li>
+            <li><a routerLink="/treatment/diagnosis-recommendations">Diagnosis and Recommendations</a></li>
+            <li><a routerLink="/treatment/dental-imaging">Dental Imaging</a></li>
+            <li><a routerLink="/treatment/treatment-progress-tracking">Treatment Progress Tracking</a></li>
+            <li><a routerLink="/treatment/appointment-coordination">Appointment Coordination</a></li>
+          </ul>
+        </li>
+
+
+        <li>
+          <a href='#' (click)="handleLinkClick($event)">Billing and Invoicing</a>
+          <ul class="sub-menu">
+            <li><a routerLink="/billing-invoicing/invoice-creation">Invoice Creation</a></li>
+            <li><a routerLink="/billing-invoicing/payment-tracking">Payment Tracking</a></li>
+           </ul>
+        </li>  
+        
+        <li>
+          <a routerLink="/pages/overview">Instructor Dashboard (Performance)</a>
+          <ul class="sub-menu">
+              <li><a routerLink="/pages/overview">Overview of clinic activities & performance</a></li>
+              <li><a routerLink="/pages/reports">Reports</a></li>
+              <li><a routerLink="/pages/trends">Trends</a></li>
+              <li><a routerLink="/pages/analysis">Analysis</a></li>
+          </ul>
+         </li>
+       </ul>
+    </li>
+
+
+            <li>
+               <a href="#" (click)="handleLinkClick($event)">Pages</a>
+                <ul class="sub-menu">
+                 
+                 <!-- <li><a routerLink="/pages/after-enroll">After Enroll</a></li>-->
+                 <!--<li><a routerLink="/pages/students">Students</a></li>-->
+                  <li><a routerLink="/pages/reviews">Reviews</a></li>
+                 <!-- <li><a routerLink="/pages/engagement">Course engagement</a></li>-->
+                  <li>
+                    <a routerLink="/pages/traffic-converssion"
+                      >Traffic & conversion</a>
+                  </li>
+
+
+
+
+                 
+                    <li>
+                        <a href="#">Communication</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Internal Communication</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Staff Communication</a></li>
+                                    <li><a href="#">Technical Support</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">External Communication</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Patient Communication</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                
+                
+                
+
+
+
+  
+                
+                 <!--<li><a routerLink="/pages/messages">Messages</a></li>-->
+                  <li><a routerLink="/pages/register">Register</a></li>
+                  <li><a routerLink="/pages/login">Login</a></li>
+                  <li><a routerLink="/pages/faq">FAQ</a></li>
+                  <li><a routerLink="/pages/404-error">404 Error</a></li>
+                </ul>
+              </li>
+
+              <li><a routerLink="/contact">Contact</a></li>
+            </ul>
+
+            <div class="header-btn">
+              <a
+                class="btn btn-secondary btn-hover-primary"
+                routerLink="/pages/register"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+          <!-- Header Menu End -->
+
+          <!-- Header Toggle Start -->
+          <div class="header-toggle d-lg-none">
+            <a class="btn btn-secondary btn-hover-primary" routerLink="/login"
+              >Sign Up</a
+            >
+
+            <a routerLink="/#" class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+          <!-- Header Toggle End -->
+        </div>
+        <!-- Header Wrapper End -->
+      </div>
+    </div>
+    <!-- Header Main End -->
+  </div>
+  <!-- Header Section End -->
+
+  <!-- Mobile Menu Start -->
+  <div class="mobile-menu">
+    <!-- Menu Close Start -->
+    <a class="menu-close" href="javascript:void(0)">
+      <i class="icofont-close-line"></i>
+    </a>
+    <!-- Menu Close End -->
+
+    <!-- Mobile Menu Start -->
+    <div class="mobile-menu-items">
+      <ul class="nav-menu">
+        <li><a class="active" routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li>
+          <a href="#" (click)="handleLinkClick($event)">All Course</a>
+          <ul class="sub-menu">
+            <li><a routerLink="all-courses/courses">Courses</a></li>
+            <li><a routerLink="all-courses/my-courses">My Courses</a></li>
+            <li>
+              <a href="#" (click)="handleLinkClick($event)">Courses Details</a>
+              <ul class="sub-menu">
+                <li>
+                  <a routerLink="courses-details/courses-details-left-sidebar"
+                    >Courses Details Left Sidebar</a
+                  >
+                </li>
+                <li>
+                  <a routerlink="courses-details/courses-details-right-sidebar.html"
+                    >Courses Details Right Sidebar</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" (click)="handleLinkClick($event)">Pages</a>
+          <ul class="sub-menu">
+            <li><a routerLink="/pages/after-enroll">After Enroll</a></li>
+            <li>
+              <a routerLink="/pages/courses-admin"
+                >Instructor Dashboard (Course List)</a
+              >
+            </li>
+            <li>
+              <a routerLink="/pages/overview">Instructor Dashboard (Performance)</a>
+            </li>
+            <li><a routerLink="/pages/students">Students</a></li>
+            <li><a routerLink="/pages/reviews">Reviews</a></li>
+            <li><a routerLink="/pages/engagement">Course engagement</a></li>
+            <li>
+              <a routerLink="/pages/traffic-conversion">Traffic & conversion</a>
+            </li>
+            <li><a routerLink="/pages/messages">Messages</a></li>
+            <li><a routerLink="/pages/register">Register</a></li>
+            <li><a routerLink="/pages/login">Login</a></li>
+            <li><a routerLink="/pages/faq">FAQ</a></li>
+            <li><a routerLink="/pages/404-error">404 Error</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" (click)="handleLinkClick($event)">Blog</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#" (click)="handleLinkClick($event)">Blog</a>
+              <ul class="sub-menu">
+                <li><a routerLink="/blog/blog-grid">Blog Grid</a></li>
+                <li>
+                  <a routerLink="/blog/blog-left-sidebar">Blog Left Sidebar</a>
+                </li>
+                <li>
+                  <a routerLink="/blog/blog-right-sidebar">Blog Right Sidebar</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" (click)="handleLinkClick($event)">Blog Details</a>
+              <ul class="sub-menu">
+                <li>
+                  <a routerLink="/blog-details/blog-details-left-sidebar"
+                    >Blog Details Left Sidebar</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/blog-detailsblog-details-right-sidebar"
+                    >Blog Details Right Sidebar</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu End -->
+  </div>
+  <!-- Mobile Menu End -->

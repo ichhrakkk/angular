@@ -1,0 +1,18 @@
+.login-header-logo{
+    width: 500px;
+    height: 200px;
+  }
+
+  .login-header {
+   background-color: #f4e2DF;
+  }
+  .login-header-logo  {
+    background-color: #f4e2DF; /* Changer la couleur de fond en blanc */
+}
+.search-input dropdown-menu {
+    background-color:#d9b478; /* Changer la couleur de fond en rouge */
+}
+
+.login-header-search dropdown {
+    background-color:#d9b478; /* Changer la couleur de fond en rouge */
+}

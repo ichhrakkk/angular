@@ -1,0 +1,156 @@
+ <!-- Overlay Start -->
+ <div class="overlay"></div>
+ <!-- Overlay End -->
+
+
+ <!-- Page banner Section Start -->
+ <div class="section page-banner-section" style="background-image: url(assets/images/dentist/Default_CABINER_DENTAIRE_MODERNE_AVEC_HAUTE_RESOLUTION_ET_COUL_1.jpg)">
+     <div class="container">
+
+         <!-- Page banner Section Start -->
+         <div class="page-banner-content">
+             <h2 class="page-title">Registration Form</h2>
+
+             <ul class="breadcrumb">
+                 <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                 <li class="breadcrumb-item active">Register</li>
+             </ul>
+         </div>
+         <!-- Page banner Section End -->
+
+     </div>
+ </div>
+ <!-- Page banner Section End -->
+
+ <!-- Login & Register Section Start -->
+ <div class="section section-padding">
+     <div class="container">
+
+         <!-- Register & Login Wrapper Start -->
+         <div class="register-login-wrapper">
+             <div class="row justify-content-center">
+                 <div class="col-lg-6 col-xl-5">
+                     <!-- Register & Login Form Start -->
+                     <div class="register-login-form">
+                         <h3 class="title">Registration <span>Now</span></h3>
+
+                         <div class="form-wrapper">
+                             
+   <!-- Single Form Start -->
+   <div class="single-form">
+    <input type="text" placeholder="Username" [(ngModel)]="basicFormData.username" name="username" (input)="showUsernameErrorMessage = false">
+    <div *ngIf="showUsernameErrorMessage && !basicFormData.username" class="error-message">
+        Please enter your username.
+    </div>
+</div>
+<!-- Single Form End -->
+<!-- Single Form Start -->
+<div class="single-form">
+    <input type="email" placeholder="Email" [(ngModel)]="basicFormData.email" name="email" (input)="showEmailErrorMessage = false">
+    <div *ngIf="showEmailErrorMessage && !basicFormData.email" class="error-message">
+        Please enter your email address.
+    </div>
+</div>
+<!-- Single Form End -->
+<!-- Single Form Start -->
+<div class="single-form">
+    <input type="password" placeholder="Password" [(ngModel)]="basicFormData.password" name="password" (input)="showPasswordErrorMessage = false" >
+    <div *ngIf="showPasswordErrorMessage && !basicFormData.password" class="error-message">
+        Please enter your password.
+    </div>
+</div>
+<!-- Single Form End -->
+
+
+<!-- Single Form Start -->
+<div class="single-form">
+    <input type="password" placeholder="Confirm Password" [(ngModel)]="basicFormData.confirmPassword" name="confirmPassword" (input)="checkPasswordMatch()" (blur)="resetConfirmPasswordError()">
+    <div *ngIf="showConfirmPasswordErrorMessage" class="error-message">
+        Please confirm your password.
+    </div>
+    <div *ngIf="showPasswordMismatchError" class="error-message">
+        Passwords do not match.
+    </div>
+</div>
+<!-- Single Form End -->
+
+
+
+
+<!-- Single Form Start -->
+<div class="single-form">
+    <input type="text" placeholder="Address" [(ngModel)]="basicFormData.address" name="address" (input)="showAddressErrorMessage = false">
+    <div *ngIf="showAddressErrorMessage && !basicFormData.address" class="error-message">
+        Please enter your address.
+    </div>
+</div>
+<!-- Single Form End -->
+<!-- Single Form Start -->
+<div class="single-form">
+    <input type="number" placeholder="Phone Number" [(ngModel)]="basicFormData.phoneNumber" name="phoneNumber" (input)="showPhoneNumberErrorMessage = false">
+    <div *ngIf="showPhoneNumberErrorMessage && !basicFormData.phoneNumber" class="error-message">
+        Please enter your phone number.
+    </div>
+</div>
+<!-- Single Form End -->
+<!-- Single Form Start -->
+<div class="single-form">
+    <select (change)="onRoleChange($event)">
+        <option value="">Select Role</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="assistant">Assistant</option>
+        <option value="admin">Admin</option>
+    </select>
+</div>
+<div *ngIf="showRoleErrorMessage" class="error-message">
+    Please select a role before displaying the form.
+</div>
+<!-- Single Form End -->
+</div>
+</div>
+<!-- Register & Login Form End -->
+</div>
+</div>
+<!-- Register & Login Wrapper End -->
+</div>
+</div>
+</div>
+<!-- Login & Register Section End -->
+
+<!-- Download App Start -->
+<div class="section section-padding download-section">
+
+    <img class="shape-01" src="assets/images/shape/shape-7.png" alt="Shape">
+    <img class="shape-02" src="assets/images/shape/shape-8.png" alt="Shape">
+
+    <div class="container">
+
+        <!-- Download App Wrapper Start -->
+        <div class="download-app-wrapper">
+
+            <!-- Section Title Start -->
+            <div class="section-title shape-none">
+                <h6 class="sub-title">mobile app available</h6>
+                <h2 class="main-title">Download mobile app. and start class anytime.</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Download App Button End -->
+            <div class="download-app-btn">
+                <ul class="app-btn">
+                    <li><a href="#"><img src="assets/images/play-store.jpg" alt="Play Store"></a></li>
+                    <li><a href="#"><img src="assets/images/app-store.jpg" alt="App Store"></a></li>
+                </ul>
+            </div>
+            <!-- Download App Button End -->
+
+        </div>
+        <!-- Download App Wrapper End -->
+
+    </div>
+</div>
+<!-- Download App End -->
+
+
+

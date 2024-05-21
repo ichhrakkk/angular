@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="assistantModalLabel">Enregistrement Assistant Dentaire</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <!-- Formulaire d'enregistrement de l'assistant dentaire -->
+    <form *ngIf="!formSubmitted" (submit)="submitForm()">
+        <div class="form-group">
+            <label for="numerolicence">Numéro de licence :</label>
+            <input type="text" id="numerolicence" name="numerolicence" class="form-control" [(ngModel)]="formData.numerolicence" required (input)="clearError('numerolicence')">
+            <div *ngIf="errorMessages.numerolicence" class="text-danger">{{ errorMessages.numerolicence }}</div>
+        </div>
+        <div class="form-group">
+            <label for="certifications">Certifications :</label>
+            <textarea id="certifications" name="certifications" class="form-control" [(ngModel)]="formData.certifications" required (input)="clearError('certifications')"></textarea>
+            <div *ngIf="errorMessages.certifications" class="text-danger">{{ errorMessages.certifications }}</div>
+        </div>
+        <div class="form-group">
+            <label for="Annees_experience">Années d'expérience :</label>
+            <input type="number" id="Annees_experience" name="Annees_experience" class="form-control" [(ngModel)]="formData.Annees_experience" required (input)="clearError('Annees_experience')">
+            <div *ngIf="errorMessages.Annees_experience" class="text-danger">{{ errorMessages.Annees_experience }}</div>
+        </div>
+        <div class="form-group">
+            <label for="competence_speciale">Compétences spéciales :</label>
+            <textarea type="text" id="competence_speciale" name="competence_speciale" class="form-control" [(ngModel)]="formData.competence_speciale" required (input)="clearError('competence_speciale')"></textarea>
+            <div *ngIf="errorMessages.competence_speciale" class="text-danger">{{ errorMessages.competence_speciale }}</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Créer un compte</button>
+    </form>
+    <div *ngIf="formSubmitted">
+        <p>Le formulaire a été soumis avec succès.</p>
+        <!-- Ajoutez ici d'autres éléments à afficher après la soumission du formulaire si nécessaire -->
+    </div>
+</div>

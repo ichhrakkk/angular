@@ -1,0 +1,18 @@
+
+@media only screen and (max-width: 575px) {
+    .header-logo a img {
+      width: 70px;
+      height: auto; /* This ensures the aspect ratio is maintained */
+    }
+    
+    .header-logo {
+      padding: 10px 0; /* Adjust padding as needed */
+    }
+    
+    .header {
+      height: auto; /* Ensures the header adjusts to the content size */
+      padding: 10px; /* Adjust padding as needed */
+    }
+  }
+
+  

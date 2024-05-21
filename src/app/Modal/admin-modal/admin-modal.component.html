@@ -1,0 +1,53 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="adminModalLabel">Enregistrement Administrateur Dentaire</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <!-- Formulaire d'enregistrement de l'administrateur dentaire -->
+    <form *ngIf="!formSubmitted" (submit)="submitForm()">
+        <div class="form-group">
+            <label for="position">Position :</label>
+            <input type="text" id="position" name="position" class="form-control" [(ngModel)]="formData.position" required (input)="clearError('position')">
+            <div *ngIf="errorMessages.position" class="text-danger">{{ errorMessages.position }}</div>
+        </div>
+        <div class="form-group">
+            <label for="datedembauche">Date d'embauche :</label>
+            <input type="date" id="datedembauche" name="datedembauche" class="form-control" [(ngModel)]="formData.datedembauche" required (input)="clearError('datedembauche')">
+            <div *ngIf="errorMessages.datedembauche" class="text-danger">{{ errorMessages.datedembauche }}</div>
+        </div>
+        <div class="form-group">
+            <label for="salaire">Salaire :</label>
+            <input type="text" id="salaire" name="salaire" class="form-control" [(ngModel)]="formData.salaire" required (input)="clearError('salaire')">
+            <div *ngIf="errorMessages.salaire" class="text-danger">{{ errorMessages.salaire }}</div>
+        </div>
+        <div class="form-group">
+            <label for="numsecuritesociale">Numéro de sécurité sociale :</label>
+            <input type="text" id="numsecuritesociale" name="numsecuritesociale" class="form-control" [(ngModel)]="formData.numsecuritesociale" required (input)="clearError('numsecuritesociale')">
+            <div *ngIf="errorMessages.numsecuritesociale" class="text-danger">{{ errorMessages.numsecuritesociale }}</div>
+        </div>
+        <div class="form-group">
+            <label for="qualifications">Qualifications :</label>
+            <textarea type="text" id="qualifications" name="qualifications" class="form-control" [(ngModel)]="formData.qualifications" required (input)="clearError('qualifications')"></textarea>
+            <div *ngIf="errorMessages.qualifications" class="text-danger">{{ errorMessages.qualifications }}</div>
+        </div>
+        <div class="form-group">
+            <label for="statutdemploi">Statut d'emploi :</label>
+            <input type="text" id="statutdemploi" name="statutdemploi" class="form-control" [(ngModel)]="formData.statutdemploi" required (input)="clearError('statutdemploi')">
+            <div *ngIf="errorMessages.statutdemploi" class="text-danger">{{ errorMessages.statutdemploi }}</div>
+        </div>
+        <div class="form-group">
+            <label for="statutcompte">Statut de compte :</label>
+            <input type="text" id="statutcompte" name="statutcompte" class="form-control" [(ngModel)]="formData.statutcompte" required (input)="clearError('statutcompte')">
+            <div *ngIf="errorMessages.statutcompte" class="text-danger">{{ errorMessages.statutcompte }}</div>
+        </div>
+        <!-- Bouton de soumission -->
+        <button type="submit" class="btn btn-primary">Créer un compte</button>
+    </form>
+    <!-- Affichage après la soumission -->
+    <div *ngIf="formSubmitted">
+        <p>Le formulaire a été soumis avec succès.</p>
+        <!-- Ajoutez ici d'autres éléments à afficher après la soumission du formulaire si nécessaire -->
+    </div>
+</div>
